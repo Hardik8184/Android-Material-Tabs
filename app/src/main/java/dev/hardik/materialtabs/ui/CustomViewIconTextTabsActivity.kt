@@ -1,7 +1,9 @@
 package dev.hardik.materialtabs.ui
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -39,16 +41,19 @@ class CustomViewIconTextTabsActivity : AppCompatActivity() {
 
     val tabOne = LayoutInflater.from(this).inflate(R.layout.custom_tab, null) as TextView
     tabOne.text = getString(R.string.one)
+    tabOne.setTextColor(Color.WHITE)
     tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_tab_favourite, 0, 0)
     tabLayout.getTabAt(0)!!.customView = tabOne
 
     val tabTwo = LayoutInflater.from(this).inflate(R.layout.custom_tab, null) as TextView
     tabTwo.text = getString(R.string.two)
+    tabTwo.setTextColor(Color.WHITE)
     tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_tab_call, 0, 0)
     tabLayout.getTabAt(1)!!.customView = tabTwo
 
     val tabThree = LayoutInflater.from(this).inflate(R.layout.custom_tab, null) as TextView
     tabThree.text = getString(R.string.three)
+    tabThree.setTextColor(Color.WHITE)
     tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_tab_contacts, 0, 0)
     tabLayout.getTabAt(2)!!.customView = tabThree
   }
